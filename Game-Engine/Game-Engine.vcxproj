@@ -28,13 +28,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -47,7 +47,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -70,9 +70,24 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SoutionDir)/Game-Engine/Lib/OpenGl-4-3;$(SoutionDir)/Game-Engine/Lib/glm/glm;$(SoutionDir)/Game-Engine/Lib/GLFW/include;$(SolutionDir)/Game-Engine/src;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\Game-Engine\Lib\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
-    <SourcePath>$(SoutionDir)/Game-Engine/src;$(SoutionDir)/Game-Engine/Lib/OpenGl-4-3;$(SourcePath)</SourcePath>
+    <IncludePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\OpenGl-4-3;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\glm;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\OpenGl-4-3;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\glm;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\OpenGl-4-3;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\glm;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\OpenGl-4-3;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\glm;C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -80,6 +95,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -89,6 +107,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\TKema\OneDrive\Documents\Development\Game-Engine\Game-Engine\Lib\GLFW\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -102,6 +121,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -115,10 +135,21 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Lib\OpenGl-4-3\gl_core_4_3.cpp" />
     <ClCompile Include="src\Engine-Main\engine-main.cpp" />
+    <ClCompile Include="src\Graphics-Engine\camera.cpp" />
+    <ClCompile Include="src\Graphics-Engine\shader-manager.cpp" />
+    <ClCompile Include="src\Graphics-Engine\window-manager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lib\OpenGl-4-3\gl_core_4_3.hpp" />
+    <ClInclude Include="src\Graphics-Engine\camera.h" />
+    <ClInclude Include="src\Graphics-Engine\shader-manager.h" />
+    <ClInclude Include="src\Graphics-Engine\window-manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
