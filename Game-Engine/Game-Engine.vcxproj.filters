@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Graphics-Engine">
       <UniqueIdentifier>{54e93c5a-02a0-487f-a647-4a042e605f80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{296b59b9-0670-455a-aa3c-d0c2e30288cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Engine-Main\engine-main.cpp">
@@ -45,6 +48,9 @@
     <ClCompile Include="src\Graphics-Engine\camera.cpp">
       <Filter>Source Files\Graphics-Engine</Filter>
     </ClCompile>
+    <ClCompile Include="src\Graphics-Engine\engine-scene.cpp">
+      <Filter>Source Files\Graphics-Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Graphics-Engine\window-manager.h">
@@ -59,5 +65,19 @@
     <ClInclude Include="src\Graphics-Engine\camera.h">
       <Filter>Header Files\Graphics_Engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Graphics-Engine\scene.h">
+      <Filter>Header Files\Graphics_Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics-Engine\engine-scene.h">
+      <Filter>Header Files\Graphics_Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Graphics-Engine\Shaders\shader.vs">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="src\Graphics-Engine\Shaders\shaders.fs">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

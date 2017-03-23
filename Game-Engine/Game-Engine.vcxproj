@@ -142,14 +142,21 @@
     <ClCompile Include="Lib\OpenGl-4-3\gl_core_4_3.cpp" />
     <ClCompile Include="src\Engine-Main\engine-main.cpp" />
     <ClCompile Include="src\Graphics-Engine\camera.cpp" />
+    <ClCompile Include="src\Graphics-Engine\engine-scene.cpp" />
     <ClCompile Include="src\Graphics-Engine\shader-manager.cpp" />
     <ClCompile Include="src\Graphics-Engine\window-manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lib\OpenGl-4-3\gl_core_4_3.hpp" />
     <ClInclude Include="src\Graphics-Engine\camera.h" />
+    <ClInclude Include="src\Graphics-Engine\engine-scene.h" />
+    <ClInclude Include="src\Graphics-Engine\scene.h" />
     <ClInclude Include="src\Graphics-Engine\shader-manager.h" />
     <ClInclude Include="src\Graphics-Engine\window-manager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Graphics-Engine\Shaders\shader.vs" />
+    <None Include="src\Graphics-Engine\Shaders\shaders.fs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

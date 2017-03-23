@@ -13,6 +13,7 @@
 #include <gl_core_4_3.hpp>
 #include <GLFW\glfw3.h>
 #include <glm\glm.hpp>
+#include <Graphics-Engine\engine-scene.h>
 
 class WindowManager
 {
@@ -23,6 +24,7 @@ class WindowManager
 
 		static void error_callback(int, const char*);
 		static void framebuffer_callback(GLFWwindow*, int, int);
+        static void key_callback(GLFWwindow*, int, int, int, int);
 		
 		bool initialiseWindow();
 		void destroyWindow();

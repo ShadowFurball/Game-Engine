@@ -6,6 +6,10 @@
 
 #include <Graphics-Engine\window-manager.h>
 
+
+Scene *scene;
+Camera camera;
+
 /**
 	Contructs a window manager object
 	@param width - interger
@@ -114,6 +118,9 @@ void WindowManager::initialiseGL()
 
 	currentCursorPosition = glm::dvec2(0, 0);
 	lastCursorPosition = glm::dvec2(0, 0);
+
+    scene = new EngineScene();
+    scene->initScene(camera);
 }
 
 /**
@@ -124,6 +131,26 @@ void WindowManager::initialiseGL()
 void WindowManager::error_callback(int error, const char* description)
 {
 	fprintf(stderr, "Error: %s\n", description);
+}
+
+/**
+    Callback function used to toggle animation and to use R to reset the camera position.
+
+	@param window
+	@param key
+	@param cancode -  size of the key code
+	@param action- Action for whether the key was released or not.
+	@param mods
+*/
+void WindowManager::key_callback(GLFWwindow* window, int key, int cancode, int action, int mods)
+{
+    if (key == GLFW_KEY_SPACE && action == GLFW_RELEASE)
+    {
+        if (scene)
+        {
+            scene->animate(!(scene->animating()));
+        }
+    }
 }
 
 /**
@@ -162,6 +189,7 @@ void WindowManager::mainLoop()
 	while (!glfwWindowShouldClose(m_pWindow) && !glfwGetKey(m_pWindow, GLFW_KEY_ESCAPE))
 	{
 		update((float)glfwGetTime());
+        scene->render(camera);
 
 		glfwSwapBuffers(m_pWindow);
 		glfwPollEvents();
